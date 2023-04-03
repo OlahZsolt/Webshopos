@@ -1,5 +1,6 @@
 body{
-    background-color: #757575;
+    background: rgb(70,82,106);
+background: radial-gradient(circle, rgba(70,82,106,1) 0%, rgba(86,103,126,1) 49%, rgba(58,64,79,1) 100%);
 }
 
 .logo_size{
