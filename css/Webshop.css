@@ -1,9 +1,51 @@
+body{
+    background-color: #757575;
+}
+
 .logo_size{
     width: 200px;
     height: 50%;
 }
 
+.custom_btn{
+    background-color: #2196F3;
+}
+
 .user_icon_size{
     width: 30px;
     height: 50%;
+    margin-bottom: 5px;
 }
+
+.search_icon_size{
+    margin-left: -12px;
+    margin-top: -9px;
+    width: 30px;
+    height: 30px;
+}
+
+.kiemelt_style{
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-family: Franklin Gothic Medium;
+}
+
+.custom_navlinks{
+        margin-left: 30%;
+}
+
+.custom_user_icon{
+    margin-left: 100%;
+}
+
+@media (max-width:991px) { 
+
+    .custom_navlinks{
+        margin-left: 0px;
+    }
+
+    .custom_user_icon{
+        margin-left: 0px;
+    }
+ }
