@@ -25,11 +25,50 @@ background: radial-gradient(circle, rgba(70,82,106,1) 0%, rgba(86,103,126,1) 49%
     height: 30px;
 }
 
+.shopping_cart_size{
+    width: 50px;
+    height: 50px;
+    margin-left: -13px;
+    margin-top: -5px;
+}
+
+.shopping_numbers_size{
+    width: 30px;
+    height: 30px;
+    margin-left: -63px;
+    margin-top: 30px;
+}
+
+.pop_shopping_cart{
+    position: absolute;
+    z-index: 1000;
+    top: 90%;
+    left: 96%;
+}
+
+
+
 .kiemelt_style{
     text-align: center;
     color: white;
     font-style: italic;
     font-family: Franklin Gothic Medium;
+}
+
+.item_number{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    margin-left: -20px;
+    margin-top: 29px;
+}
+
+.item_number_two{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    margin-left: -27px;
+    margin-top: 29px;
 }
 
 .custom_navlinks{
