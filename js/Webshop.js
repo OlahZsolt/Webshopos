@@ -1,7 +1,5 @@
 // * JQUERY
 $(document).ready(function(){
-    alert("Üdvözöllek a weboldalunkon!");
-
     var i=0;
 
     $("#hyper_shop").click(function(){
