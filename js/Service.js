@@ -14,14 +14,47 @@ $(document).ready(function () {
     var alaplap_asus_rog_maximus_z690 = 0;
     var asus_rog_strix_1000g = 0;
 
+    // ? Adatok local stroge-ba helyezése
+
+
+/*
+    var formData = {
+        set : function (){
+            var  formData = [];
+            localStorage.removeItem('formData ');
+            $('form input[type=text]').each(function(){
+                formData .push({ name: this.name, value: this.value});
+            });
+            localStorage.formData = JSON.stringify(formData);
+        },
+        get : function (){
+            if(localStorage.formData  != undefined){
+                formData  = JSON.parse(localStorage.formData);
+                for (var i = 0; i < formData.length; i++) {
+                    $('[name='+formData[i].name+']').val(formData[i].value);
+                }
+            }
+        }
+    }
+    formData.get();
+    $("input").change( function() {
+        formData.set();
+    });
+*/
+
+
+
+
+
+
     // * HyperX Cloud Flight (Kosárba rakása)
     $("#hyper_shop").click(function () {
         i++;
         hyperX_cloud_flight++;
         console.log('HyperX Cloud Flight a kosárban: '+hyperX_cloud_flight+'db');
         console.log('Ennyi áru van a kosárban összesen: '+i+'db');
+        $("#fooldal_hyper_cloud_flight_db").text(hyperX_cloud_flight);
         $("#item_number").text(i);
-
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
@@ -29,11 +62,12 @@ $(document).ready(function () {
     });
 
     // * Razer Viper Mini (Kosárba rakása)
-    $("#razer_viper__shop").click(function () {
+    $("#razer_viper_shop").click(function () {
         i++;
         razer_viper_mini++;
         console.log('Razer Viper Mini a kosárban: '+razer_viper_mini+'db');
         console.log('Ennyi áru van a kosárban összesen: '+i+'db');
+        $("#fooldal_razer_viper_db").text(razer_viper_mini);
         $("#item_number").text(i);
 
         if (i > 9) {

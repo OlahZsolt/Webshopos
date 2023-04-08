@@ -1,7 +1,32 @@
-body{
+body, html{
     background: rgb(70,82,106);
 background: radial-gradient(circle, rgba(70,82,106,1) 0%, rgba(86,103,126,1) 49%, rgba(58,64,79,1) 100%);
 }
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(32, 32, 32, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(32, 32, 32, 0.3);;
+  }
+  
+
 
 .aru_ar{
     color: white;
