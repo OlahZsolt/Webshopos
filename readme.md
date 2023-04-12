@@ -20,3 +20,11 @@ Továbbá ha a kosárra kattintunk (még nincs kész) megjeleníti a kosár tart
 ### Oláh Zsolt Martin bejegyzés 
 Működnek az áruk kosárba rakásai, elkezdtem a kosár kinézetét is megtervezni amint rákattintunk jobb lent a kosárra
 ***
+
+***
+**2023.04.12**
+### Viczián Dániel bejegyzés
+Elkészült a "regisztráció" és a "bejelentkezés" fül, a hozzátartozó stílus  formázással együtt.
+
+Továbbá folyamatban van a "rólunk" és a "kapcsolatok" fül elkészítése.
+***
