@@ -1,7 +1,7 @@
 ***
 # Webshop Dokumentáció
 
-**Beosztottuk Danival a munkákat, én a fő oldalért, a navbar-ért és a kosár tartalmáért felelek, ő pedig a regisztráció, bejelentkezés, és a "Rólunk" fülért.**
+**Beosztottuk Danival a munkákat, én a fő oldalért, a navbar-ért és a kosár tartalmáért felelek, ő pedig a regisztráció, bejelentkezés, kapcsolatok és a "Rólunk" fülért.**
 
 Az adatbázisra kötést vagy a php-s megoldást közösen csináljuk.
 
