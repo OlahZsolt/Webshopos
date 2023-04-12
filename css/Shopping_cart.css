@@ -38,20 +38,20 @@ background: radial-gradient(circle, rgba(70,82,106,1) 0%, rgba(86,103,126,1) 49%
     background-color: white;
     margin: auto;
     width: 60%;
-    height: 737px;
+    height: 100%;
     border-radius: 30px;
  }
 
- .hyperX_cloud_cart_image{
-    width: 100px;
-    height: 100px;
+ .shopping_cart_image{
+    width: 60px;
+    height: 60px;
  }
 
- .hyperX_cloud_cart_description{
+ .shopping_cart_description{
     color: black;
  }
 
- .hyperX_cloud_cart_amount{
+ .shopping_cart_amount{
     color: black;
     margin-top: 5px;
  }
