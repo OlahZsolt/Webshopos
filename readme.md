@@ -28,3 +28,13 @@ Elkészült a "regisztráció" és a "bejelentkezés" fül, a hozzátartozó st�
 
 Továbbá folyamatban van a "rólunk" és a "kapcsolatok" fül elkészítése.
 ***
+
+***
+**2023.04.12**
+### Oláh Zsolt Martin bejegyzés 
+Előszöris a fő oldalon mostmár lehet az árukat hibátlanul hozzáadni a kosárhoz, amely minden áru kártyáján megjelenik az "x" után, hogy mennyi van a kosárban, jobb lent a kosár melletti szám pedig az összes kosárba rakott tárgyat jelenti. Mostmár ki is tudjuk szedni a kosárból a tárgyakat, vagyis visszavonni de még csak a fő oldalon.
+
+A kosár tartalma lapon is fejlesztettem, mostmár kiadja az összes tárgyat, nagyjából a grafikai része kész, már csak be kell programozni js-ben hogy lehesen a darab számot változtatni, és csak azok az áruk jelenjenek meg, amelyeket beleraktunk a kosárba, remélhetőleg a héten már készen lesz.
+
+\+ pár kisebb hibát javítottam
+***
