@@ -2,10 +2,12 @@
 
 $(function () {
 
+    
+
     // ? Változók
     var i = 0;
     var hyperX_cloud_flight = 0;
-    var razer_viper_mini = 0;
+    var razer_viper_mini = localStorage.getItem("razer_db");
     var blitzwolf_bw_kb1 = 0;
     var asus_geforce_rtx_4090 = 0;
     var intel_core_i9_10900K = 0;
@@ -14,70 +16,96 @@ $(function () {
     var alaplap_asus_rog_maximus_z690 = 0;
     var asus_rog_strix_1000g = 0;
 
-
+    // ! Amint betöltődik az oldal megkapja ezeket az értékeket
+    $('#fooldal_hyper_cloud_flight_db').text(localStorage.getItem("hyperx_exists"+1));
     // * HyperX Cloud Flight (Kosárba rakása)
     $("#hyper_shop").click(function () {
+
+
+        localStorage.setItem("hyperx_exists",hyperX_cloud_flight ++);
+
+        var letezik = localStorage.getItem("hyperx_exists");
         i++;
         hyperX_cloud_flight++;
-        console.log('HyperX Cloud Flight a kosárban: ' + hyperX_cloud_flight + 'db');
-        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
+
         $("#fooldal_hyper_cloud_flight_db").text(hyperX_cloud_flight);
         $("#item_number").text(i);
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $('#fooldal_hyper_cloud_flight_db').text(localStorage.getItem("hyperx_exists"));
     });
 
     $("#hyper_shop_remove").click(function () {
         if (hyperX_cloud_flight > 0) {
             i--;
-            hyperX_cloud_flight--;
-            console.log('HyperX Cloud Flight a kosárban: ' + hyperX_cloud_flight + 'db');
-            console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#fooldal_hyper_cloud_flight_db").text(hyperX_cloud_flight);
+            localStorage.setItem("hyperx_exists",hyperX_cloud_flight-- );
+            console.log(localStorage.getItem("hyperx_exists")+' kivonás után');
+            $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyperx_exists"));
             $("#item_number").text(i);
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
                 $("#item_number").addClass("item_number_two");
             }
-
         }
-
+        if(localStorage.getItem("hyperx_exists") == 0) {
+            localStorage.setItem("hyperx_exists",0 );
+            var letezik_0 = localStorage.getItem("hyperx_exists");
+            console.log(letezik_0+' 0?');
+            $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyperx_exists"));
+        }
     });
 
+
+
+
+
+
+
+
+
+
     // * Razer Viper Mini (Kosárba rakása)
+    $("#fooldal_razer_viper_db").text(localStorage.getItem("razer_db"));
+    
     $("#razer_viper_shop").click(function () {
         i++;
         razer_viper_mini++;
+        localStorage.setItem("razer_db",razer_viper_mini);
         console.log('Razer Viper Mini a kosárban: ' + razer_viper_mini + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_razer_viper_db").text(razer_viper_mini);
         $("#item_number").text(i);
-
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_razer_viper_db").text(localStorage.getItem("razer_db"));
     });
 
     $("#razer_viper_shop_remove").click(function () {
         if (razer_viper_mini > 0) {
             i--;
             razer_viper_mini--;
+            localStorage.setItem("razer_db",razer_viper_mini);
             console.log('Razer Viper Mini a kosárban: ' + razer_viper_mini + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#fooldal_razer_viper_db").text(razer_viper_mini);
             $("#item_number").text(i);
-
+            $("#fooldal_razer_viper_db").text(localStorage.getItem("razer_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
                 $("#item_number").addClass("item_number_two");
             }
-
         }
-
     });
+
+
+
+
+
+
+
+
 
     // * BLITZWOLF BW-KB1 (Kosárba rakása)
     $("#blitzwolf_bw-kb1_shop").click(function () {
