@@ -7,7 +7,7 @@
   <title>Regisztráció</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/Registration.css">
+  <link rel="stylesheet" href="../css/Registration.css">
 </head>
 
 <body>
@@ -19,113 +19,153 @@
     * Új pont Szállítási adatok: Irszam, Megye, Város, KözterTípus, KözterNév,
     * UtcaSzám, Épület, Ajtó-->
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="../assets/webshop_logo_dark_theme.png" class="logo_size" alt="webshop_logo"/></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse custom_navlinks" id="navbarSupportedContent">
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Keresés.." aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Keresés</button>
-          </form>
-          <ul  class="navbar-nav me-auto mb-2 mb-lg-0" >
-            <li class="nav-item dropdown custom_user_icon">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="../assets/user_icon.png" class="user_icon_size" alt="user_icon" />
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="Registration.html">Regisztráció</a></li>
-                <li><a class="dropdown-item" href="Login.html">Bejelentkezés</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="AboutUs.html">Kapcsolat</a></li>
-                <li><a class="dropdown-item" href="Availability.html">Rólunk</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="../assets/webshop_logo_dark_theme.png" class="logo_size"
+          alt="webshop_logo" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse custom_navlinks" id="navbarSupportedContent">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Keresés.." aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Keresés</button>
+        </form>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown custom_user_icon">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../assets/user_icon.png" class="user_icon_size" alt="user_icon" />
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Registration.html">Regisztráció</a></li>
+              <li><a class="dropdown-item" href="Login.html">Bejelentkezés</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="AboutUs.html">Rólunk</a></li>
+              <li><a class="dropdown-item" href="Availability.html">Kapcsolat</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
-  
-    <div class="center">
-    
-  <form class="row g-3">
-    <h1>Regisztráció</h1>
-    <h3>Személyes adatok</h3>
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4">
     </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Jelszó</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-md-6">
-      <label for="inputLastName" class="form-label">Vezetéknév</label>
-      <input type="text" class="form-control" id="inputLastName">
-    </div>
-    <div class="col-md-6">
-      <label for="inputFirstName" class="form-label">Keresztnév</label>
-      <input type="text" class="form-control" id="inputFirstName">
-    </div>
-    <div class="col-md-6">
-      <label for="inputPhone" class="form-label">Telefonszám</label>
-      <input type="text" class="form-control" id="inputPhone" placeholder="+36701233214">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Cím</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress2" class="form-label">Házszám</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó">
-    </div>
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">Város</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-md-4">
-      <label for="inputState" class="form-label">Megye</label>
-      <select id="inputState" class="form-select">
-        <option selected>Válassz...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Irányítószám</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
-    <h3>Szállítási adatok</h3>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Cím</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress2" class="form-label">Házszám</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó">
-    </div>
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">Város</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="col-md-4">
-      <label for="inputState" class="form-label">Megye</label>
-      <select id="inputState" class="form-select">
-        <option selected>Válassz...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Irányítószám</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
+  </nav>
 
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Regisztrálok</button>
-    </div>
-  </form>
-</div>
+  <div class="center">
+
+    <form class="row g-3">
+      <h1>Regisztráció</h1>
+      <h3>Személyes adatok</h3>
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Jelszó</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputLastName" class="form-label">Vezetéknév</label>
+        <input type="text" class="form-control" id="inputLastName">
+      </div>
+      <div class="col-md-6">
+        <label for="inputFirstName" class="form-label">Keresztnév</label>
+        <input type="text" class="form-control" id="inputFirstName">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPhone" class="form-label">Telefonszám</label>
+        <input type="text" class="form-control" id="inputPhone" placeholder="+36701233214">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Cím</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Házszám</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Város</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Megye</label>
+        <select id="inputState" class="form-select">
+          <option selected>Válassz...</option>
+          <option>Bács-Kiskun</option>
+          <option>Baranya</option>
+          <option>Békés</option>
+          <option>Borsod-Abaúj-Zemplén</option>
+          <option>Csongrád</option>
+          <option>Fejér</option>
+          <option>Győr-Moson-Sopron</option>
+          <option>Hajdú-Bihar</option>
+          <option>Heves</option>
+          <option>Jász-Nagykun-Szolnok</option>
+          <option>Komárom-Esztergom</option>
+          <option>Nógrád</option>
+          <option>Pest</option>
+          <option>Somogy</option>
+          <option>Szabolcs-Szatmár-Bereg</option>
+          <option>Tolna</option>
+          <option>Vas</option>
+          <option>Veszprém</option>
+          <option>Zala</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Irányítószám</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+      <h3>Szállítási adatok</h3>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Cím</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus">
+      </div>
+      <div class="col-12">
+        <label for="inputAddress2" class="form-label">Házszám</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó">
+      </div>
+      <div class="col-md-6">
+        <label for="inputCity" class="form-label">Város</label>
+        <input type="text" class="form-control" id="inputCity">
+      </div>
+      <div class="col-md-4">
+        <label for="inputState" class="form-label">Megye</label>
+        <select id="inputState" class="form-select">
+          <option selected>Válassz...</option>
+          <option>Bács-Kiskun</option>
+          <option>Baranya</option>
+          <option>Békés</option>
+          <option>Borsod-Abaúj-Zemplén</option>
+          <option>Csongrád</option>
+          <option>Fejér</option>
+          <option>Győr-Moson-Sopron</option>
+          <option>Hajdú-Bihar</option>
+          <option>Heves</option>
+          <option>Jász-Nagykun-Szolnok</option>
+          <option>Komárom-Esztergom</option>
+          <option>Nógrád</option>
+          <option>Pest</option>
+          <option>Somogy</option>
+          <option>Szabolcs-Szatmár-Bereg</option>
+          <option>Tolna</option>
+          <option>Vas</option>
+          <option>Veszprém</option>
+          <option>Zala</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="inputZip" class="form-label">Irányítószám</label>
+        <input type="text" class="form-control" id="inputZip">
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Regisztrálok</button>
+      </div>
+    </form>
+  </div>
 
 
 
