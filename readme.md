@@ -38,3 +38,13 @@ A kosár tartalma lapon is fejlesztettem, mostmár kiadja az összes tárgyat, n
 
 \+ pár kisebb hibát javítottam
 ***
+
+***
+**2023.04.13**
+### Oláh Zsolt Martin bejegyzés 
+Megcsináltam, hogy sikeresen megjegyezze, hogy ha az razer viper egeret hozzáadjuk a kosárhoz, akkor ugyanazt a szám mennyiséget mutatja a fő oldalon is mint a kosárnál, a kosárnál lehet a "+" és "-" jellel növelni és csökkenteni a mennyiséget. Ez mind változik a fő oldalon is egyszerre, amint eléri a számláló a nullát akkor eltűnik a kosárból.
+
+Még a kosár ikon buggosan adja ki, hogy mennyi tárgy van a kosárban, de azt csak pár helyen át kell írni, úgy hiszem ,hogy a neheze már megvan, már csak másolgatni és átírogatni kell.
+
+Hozzáadtam a teljes összeget, ahol majd kiírja az összes vásárolandó termékek összegét, és jelenleg az egérnél működik, de a többinél is fog hiszen már csak másolgatni kell és a változó neveket átírni.
+***
