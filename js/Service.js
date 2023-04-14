@@ -6,10 +6,10 @@ $(function () {
 
     // ? Változók
     var i = 0;
-    var hyperX_cloud_flight = 0;
+    var hyperX_cloud_flight = localStorage.getItem("hyper_db");;
     var razer_viper_mini = localStorage.getItem("razer_db");
-    var blitzwolf_bw_kb1 = 0;
-    var asus_geforce_rtx_4090 = 0;
+    var blitzwolf_bw_kb1 = localStorage.getItem("blitzwolf_db");
+    var asus_geforce_rtx_4090 = localStorage.getItem("rtx_db");;
     var intel_core_i9_10900K = 0;
     var kingston_fury_16GB = 0;
     var dell_alienware_aw2521h = 0;
@@ -17,52 +17,37 @@ $(function () {
     var asus_rog_strix_1000g = 0;
 
     // ! Amint betöltődik az oldal megkapja ezeket az értékeket
-    $('#fooldal_hyper_cloud_flight_db').text(localStorage.getItem("hyperx_exists"+1));
+    $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyper_db"));
     // * HyperX Cloud Flight (Kosárba rakása)
     $("#hyper_shop").click(function () {
-
-
-        localStorage.setItem("hyperx_exists",hyperX_cloud_flight ++);
-
-        var letezik = localStorage.getItem("hyperx_exists");
         i++;
         hyperX_cloud_flight++;
-
-        $("#fooldal_hyper_cloud_flight_db").text(hyperX_cloud_flight);
+        localStorage.setItem("hyper_db",hyperX_cloud_flight);
+        console.log('Hyperx a kosárban: ' + hyperX_cloud_flight + 'db');
+        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
         $("#item_number").text(i);
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
-        $('#fooldal_hyper_cloud_flight_db').text(localStorage.getItem("hyperx_exists"));
+        $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyper_db"));
     });
 
     $("#hyper_shop_remove").click(function () {
         if (hyperX_cloud_flight > 0) {
             i--;
-            localStorage.setItem("hyperx_exists",hyperX_cloud_flight-- );
-            console.log(localStorage.getItem("hyperx_exists")+' kivonás után');
-            $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyperx_exists"));
+            hyperX_cloud_flight--;
+            localStorage.setItem("hyper_db",hyperX_cloud_flight);
+            console.log('Hyperx a kosárban: ' + hyperX_cloud_flight + 'db');
+            console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
             $("#item_number").text(i);
+            $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyper_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
                 $("#item_number").addClass("item_number_two");
             }
         }
-        if(localStorage.getItem("hyperx_exists") == 0) {
-            localStorage.setItem("hyperx_exists",0 );
-            var letezik_0 = localStorage.getItem("hyperx_exists");
-            console.log(letezik_0+' 0?');
-            $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyperx_exists"));
-        }
     });
-
-
-
-
-
-
-
 
 
 
@@ -100,47 +85,43 @@ $(function () {
     });
 
 
-
-
-
-
-
-
-
     // * BLITZWOLF BW-KB1 (Kosárba rakása)
-    $("#blitzwolf_bw-kb1_shop").click(function () {
-        blitzwolf_bw_kb1++;
-        i++;
-        console.log('BLITZWOLF BW-KB1 a kosárban: ' + blitzwolf_bw_kb1 + 'db');
-        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_blitzwolf_bw-kb1_db").text(blitzwolf_bw_kb1);
-        $("#item_number").text(i);
+    $("#fooldal_blitzwolf_bw-kb1_db").text(localStorage.getItem("blitzwolf_db"));
 
+    $("#blitzwolf_bw-kb1_shop").click(function () {
+        i++;
+        blitzwolf_bw_kb1++;
+        localStorage.setItem("blitzwolf_db",blitzwolf_bw_kb1);
+        console.log('Blitzwolf a kosárban: ' + blitzwolf_bw_kb1 + 'db');
+        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
+        $("#item_number").text(i);
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_blitzwolf_bw-kb1_db").text(localStorage.getItem("blitzwolf_db"));
     });
 
     $("#blitzwolf_bw-kb1_shop_remove").click(function () {
         if (blitzwolf_bw_kb1 > 0) {
+            i--;
             blitzwolf_bw_kb1--;
-        i--;
-        console.log('BLITZWOLF BW-KB1 a kosárban: ' + blitzwolf_bw_kb1 + 'db');
-        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_blitzwolf_bw-kb1_db").text(blitzwolf_bw_kb1);
-        $("#item_number").text(i);
-
-        if (i > 9) {
-            $("#item_number").removeClass("item_number");
-            $("#item_number").addClass("item_number_two");
-        }
-
+            localStorage.setItem("blitzwolf_db",blitzwolf_bw_kb1);
+            console.log('Blitzwolf a kosárban: ' + blitzwolf_bw_kb1 + 'db');
+            console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
+            $("#item_number").text(i);
+            $("#fooldal_blitzwolf_bw-kb1_db").text(localStorage.getItem("blitzwolf_db"));
+            if (i > 9) {
+                $("#item_number").removeClass("item_number");
+                $("#item_number").addClass("item_number_two");
+            }
         }
 
     });
 
     // * ASUS GeForce RTX 4090 OC 24GB GDDR6X (Kosárba rakása)
+    $("#fooldal_rtx_4090_db").text(localStorage.getItem("rtx_db"));
+
     $("#rtx_4090_shop").click(function () {
         i++;
         asus_geforce_rtx_4090++;

@@ -11,33 +11,48 @@ $(function () {
     $('#maximus_row').hide();
     $('#strix_row').hide();
 
-    
+    var hyperx_mennyiseg = localStorage.getItem("hyper_db");
+    var hyperx_ar= 36899;
+    var razer_mennyiseg = localStorage.getItem("razer_db");
+    var razer_ar= 19899;
+    var blitzwolf_mennyiseg = localStorage.getItem("blitzwolf_db");
+    var blitzwolf_ar= 22499;
+
+    $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar));
+
+    $("#hyperX_cloud_cart_amount").text(hyperx_mennyiseg);
+    console.log('hyperx: '+ hyperx_mennyiseg);
+    $("#razer_viper_cart_amount").text(razer_mennyiseg);
+    console.log('viper: '+ razer_mennyiseg);
+    $("#blitzwolf_cart_amount").text(blitzwolf_mennyiseg);
+    console.log('viper: '+ razer_mennyiseg);
 
     // ? Hyperx van-e a kosárban
 
-    var hyperx_mennyiseg = localStorage.getItem("hyperx_exists");
-    
-
-    $('#hyperX_cloud_cart_amount').text(hyperx_mennyiseg);
+    if(localStorage.getItem("hyper_db") > 0)
+    {
+        $('#hyperx_row').show();
+    }
 
     $("#hyper_plus").click(function(){
-        localStorage.setItem("hyperx_exists",hyperx_mennyiseg++ );
-        $('#hyperX_cloud_cart_amount').text(localStorage.getItem("hyperx_exists"));
-      });
+        hyperx_mennyiseg++;
+        localStorage.setItem("hyper_db",hyperx_mennyiseg);
+        $("#hyperX_cloud_cart_amount").text(hyperx_mennyiseg);
+        $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar))
+        console.log('hyper: '+ hyperx_mennyiseg);
+    })
 
     $("#hyper_minus").click(function(){
-    if(hyperx_mennyiseg > 0){
-        localStorage.setItem("hyperx_exists",hyperx_mennyiseg-- );
-        $('#hyperX_cloud_cart_amount').text(localStorage.getItem("hyperx_exists"));
-    }else {
-        $('#hyperx_row').hide();
-    }
-    });
-    
-
-    /*if(hyperx_mennyiseg > 0){
-        $('#hyperx_row').show();
-    }*/
+        hyperx_mennyiseg--;
+        localStorage.setItem("hyper_db",hyperx_mennyiseg);
+        $("#hyperX_cloud_cart_amount").text(hyperx_mennyiseg);
+        $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar))
+        console.log('hyper: '+ hyperx_mennyiseg);
+        if($("#hyperX_cloud_cart_amount").text() == 0)
+        {
+            $('#hyperx_row').hide();
+        }
+    })
 
     // ! Hyperx vége
 
@@ -48,13 +63,6 @@ $(function () {
 
     // ? Razer a kosárban
 
-    var razer_mennyiseg = localStorage.getItem("razer_db");
-    var razer_ar= 19899;
-
-    $("#razer_viper_cart_amount").text(razer_mennyiseg);
-    $('#ossz_ar').text(razer_mennyiseg * razer_ar)
-    console.log('viper: '+ razer_mennyiseg);
-
     if(localStorage.getItem("razer_db") > 0)
     {
         $('#razer_row').show();
@@ -64,7 +72,7 @@ $(function () {
         razer_mennyiseg++;
         localStorage.setItem("razer_db",razer_mennyiseg);
         $("#razer_viper_cart_amount").text(razer_mennyiseg);
-        $('#ossz_ar').text(razer_mennyiseg * razer_ar)
+        $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar))
         console.log('viper: '+ razer_mennyiseg);
     })
 
@@ -72,7 +80,7 @@ $(function () {
         razer_mennyiseg--;
         localStorage.setItem("razer_db",razer_mennyiseg);
         $("#razer_viper_cart_amount").text(razer_mennyiseg);
-        $('#ossz_ar').text(razer_mennyiseg * razer_ar)
+        $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar))
         console.log('viper: '+ razer_mennyiseg);
         if($("#razer_viper_cart_amount").text() == 0)
         {
@@ -82,5 +90,34 @@ $(function () {
 
 
     // ! Razer vége
+
+    // ? Blitzwolf a kosárban
+
+    if(localStorage.getItem("blitzwolf_db") > 0)
+    {
+        $('#blitzwolf_row').show();
+    }
+
+    $("#blitzwolf_plus").click(function(){
+        blitzwolf_mennyiseg++;
+        localStorage.setItem("blitzwolf_db",blitzwolf_mennyiseg);
+        $("#blitzwolf_cart_amount").text(blitzwolf_mennyiseg);
+        $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar))
+        console.log('blitzwolf: '+ blitzwolf_mennyiseg);
+    })
+
+    $("#blitzwolf_minus").click(function(){
+        blitzwolf_mennyiseg--;
+        localStorage.setItem("blitzwolf_db",blitzwolf_mennyiseg);
+        $("#blitzwolf_cart_amount").text(blitzwolf_mennyiseg);
+        $('#ossz_ar').text((razer_mennyiseg * razer_ar)+(hyperx_mennyiseg * hyperx_ar)+(blitzwolf_mennyiseg * blitzwolf_ar))
+        console.log('blitzwolf: '+ blitzwolf_mennyiseg);
+        if($("#blitzwolf_cart_amount").text() == 0)
+        {
+            $('#blitzwolf_row').hide();
+        }
+    })
+
+    // ! Blitzwolf vége
     
 });
