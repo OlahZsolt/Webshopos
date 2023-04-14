@@ -1,1 +1,50 @@
-/* TODO még üres/
+body {
+    background: rgb(70, 82, 106);
+    background: radial-gradient(circle, rgba(70, 82, 106, 1) 0%, rgba(86, 103, 126, 1) 49%, rgba(58, 64, 79, 1) 100%);
+}
+
+.logo_size {
+    width: 200px;
+    height: 50%;
+}
+
+.user_icon_size {
+    width: 30px;
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+.custom_navlinks {
+    margin-left: 30%;
+}
+
+.custom_user_icon {
+    margin-left: 100%;
+}
+
+div {
+    margin: 0 auto 0 auto;
+    width: 700px;
+
+
+}
+
+h4 {
+    margin: 20px 0;
+    text-align:center;
+}
+
+.text {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    background: white;
+border-radius: 10px;
+}
+
+.text h4,p{
+    padding:  20px 20px 20px 20px;
+}
