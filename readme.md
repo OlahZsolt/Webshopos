@@ -48,8 +48,10 @@ Még a kosár ikon buggosan adja ki, hogy mennyi tárgy van a kosárban, de azt 
 
 Hozzáadtam a teljes összeget, ahol majd kiírja az összes vásárolandó termékek összegét, és jelenleg az egérnél működik, de a többinél is fog hiszen már csak másolgatni kell és a változó neveket átírni.
 ***
+***
 **2023.04.14**
 ### Viczián Dániel bejegyzés
 Elkészült a "kapcsolatok" és a "rólunk" fül, kisebb javítások még lehetnek rajta.
 
 Elkezdem az adatbázisra kötést a regisztáció és a bejelentkezéshez, amit php-val terzezünk megvalósítani.
+***
