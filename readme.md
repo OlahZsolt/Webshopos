@@ -61,3 +61,9 @@ Elkezdem az adatbázisra kötést a regisztáció és a bejelentkezéshez, amit 
 ### Oláh Zsolt Martin bejegyzés 
 Újabb 2 árut csináltam meg, hogy működjön a kosárba rakása, a negyediket is elkezdtem.
 ***
+
+***
+**2023.04.17**
+### Oláh Zsolt Martin bejegyzés 
+Mostmár minden áruval működik a kosárba rakás, és ha a kosár oldalon kitöröljük vagy hozzáadunk, akkor ott is ugyanazt követi, szóval nagyjából össze lett hangolva a két oldal.
+***
