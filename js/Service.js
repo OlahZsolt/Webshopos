@@ -3,21 +3,24 @@
 $(function () {
 
     
-
     // ? Változók
-    var i = 0;
-    var hyperX_cloud_flight = localStorage.getItem("hyper_db");;
+    var i = localStorage.getItem("ossz_db");
+    var hyperX_cloud_flight = localStorage.getItem("hyper_db");
     var razer_viper_mini = localStorage.getItem("razer_db");
     var blitzwolf_bw_kb1 = localStorage.getItem("blitzwolf_db");
-    var asus_geforce_rtx_4090 = localStorage.getItem("rtx_db");;
-    var intel_core_i9_10900K = 0;
-    var kingston_fury_16GB = 0;
-    var dell_alienware_aw2521h = 0;
-    var alaplap_asus_rog_maximus_z690 = 0;
-    var asus_rog_strix_1000g = 0;
+    var asus_geforce_rtx_4090 = localStorage.getItem("rtx_db");
+    var intel_core_i9_10900K = localStorage.getItem("i9_db");
+    var kingston_fury_16GB = localStorage.getItem("kingston_db");
+    var dell_alienware_aw2521h = localStorage.getItem("dell_db");
+    var alaplap_asus_rog_maximus_z690 = localStorage.getItem("alaplap_db");
+    var asus_rog_strix_1000g = localStorage.getItem("strix_db");
 
-    // ! Amint betöltődik az oldal megkapja ezeket az értékeket
+    // TODO Amint betöltődik az oldal megkapja ezeket az értékeket
     $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyper_db"));
+    $("#item_number").text(localStorage.getItem("ossz_db"));
+
+
+
     // * HyperX Cloud Flight (Kosárba rakása)
     $("#hyper_shop").click(function () {
         i++;
@@ -25,7 +28,8 @@ $(function () {
         localStorage.setItem("hyper_db",hyperX_cloud_flight);
         console.log('Hyperx a kosárban: ' + hyperX_cloud_flight + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#item_number").text(i);
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
@@ -40,7 +44,8 @@ $(function () {
             localStorage.setItem("hyper_db",hyperX_cloud_flight);
             console.log('Hyperx a kosárban: ' + hyperX_cloud_flight + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#item_number").text(i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            localStorage.setItem("ossz_db",i);
             $("#fooldal_hyper_cloud_flight_db").text(localStorage.getItem("hyper_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
@@ -60,7 +65,8 @@ $(function () {
         localStorage.setItem("razer_db",razer_viper_mini);
         console.log('Razer Viper Mini a kosárban: ' + razer_viper_mini + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#item_number").text(i);
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
@@ -75,7 +81,8 @@ $(function () {
             localStorage.setItem("razer_db",razer_viper_mini);
             console.log('Razer Viper Mini a kosárban: ' + razer_viper_mini + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#item_number").text(i);
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
             $("#fooldal_razer_viper_db").text(localStorage.getItem("razer_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
@@ -94,7 +101,8 @@ $(function () {
         localStorage.setItem("blitzwolf_db",blitzwolf_bw_kb1);
         console.log('Blitzwolf a kosárban: ' + blitzwolf_bw_kb1 + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#item_number").text(i);
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
@@ -109,7 +117,8 @@ $(function () {
             localStorage.setItem("blitzwolf_db",blitzwolf_bw_kb1);
             console.log('Blitzwolf a kosárban: ' + blitzwolf_bw_kb1 + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#item_number").text(i);
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
             $("#fooldal_blitzwolf_bw-kb1_db").text(localStorage.getItem("blitzwolf_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
@@ -125,196 +134,212 @@ $(function () {
     $("#rtx_4090_shop").click(function () {
         i++;
         asus_geforce_rtx_4090++;
-        console.log('ASUS GeForce RTX 4090 OC 24GB GDDR6X a kosárban: ' + asus_geforce_rtx_4090 + 'db');
+        localStorage.setItem("rtx_db",asus_geforce_rtx_4090);
+        console.log('Rtx a kosárban: ' + asus_geforce_rtx_4090 + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_rtx_4090_db").text(asus_geforce_rtx_4090);
-        $("#item_number").text(i);
-
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_rtx_4090_db").text(localStorage.getItem("rtx_db"));
     });
 
     $("#rtx_4090_shop_remove").click(function () {
         if (asus_geforce_rtx_4090 > 0) {
             i--;
             asus_geforce_rtx_4090--;
-            console.log('ASUS GeForce RTX 4090 OC 24GB GDDR6X a kosárban: ' + asus_geforce_rtx_4090 + 'db');
+            localStorage.setItem("rtx_db",asus_geforce_rtx_4090);
+            console.log('Rtx a kosárban: ' + asus_geforce_rtx_4090 + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#fooldal_rtx_4090_db").text(asus_geforce_rtx_4090);
-            $("#item_number").text(i);
-    
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            $("#fooldal_rtx_4090_db").text(localStorage.getItem("rtx_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
                 $("#item_number").addClass("item_number_two");
             }
-
         }
 
     });
 
     // * Intel Core i9-10900K (Kosárba rakása)
+    $("#fooldal_i9-10900K_db").text(localStorage.getItem("i9_db"));
+    
     $("#i9-10900K_shop").click(function () {
         i++;
         intel_core_i9_10900K++;
-        console.log('Intel Core i9-10900K a kosárban: ' + intel_core_i9_10900K + 'db');
+        localStorage.setItem("i9_db",intel_core_i9_10900K);
+        console.log('i9 a kosárban: ' + intel_core_i9_10900K + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_i9-10900K_db").text(intel_core_i9_10900K);
-        $("#item_number").text(i);
-
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_i9-10900K_db").text(localStorage.getItem("i9_db"));
     });
 
     $("#i9-10900K_shop_remove").click(function () {
         if (intel_core_i9_10900K > 0) {
             i--;
-        intel_core_i9_10900K--;
-        console.log('Intel Core i9-10900K a kosárban: ' + intel_core_i9_10900K + 'db');
-        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_i9-10900K_db").text(intel_core_i9_10900K);
-        $("#item_number").text(i);
-
-        if (i > 9) {
-            $("#item_number").removeClass("item_number");
-            $("#item_number").addClass("item_number_two");
-        }
-
+            intel_core_i9_10900K--;
+            localStorage.setItem("i9_db",intel_core_i9_10900K);
+            console.log('i9 a kosárban: ' + intel_core_i9_10900K + 'db');
+            console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            $("#fooldal_i9-10900K_db").text(localStorage.getItem("i9_db"));
+            if (i > 9) {
+                $("#item_number").removeClass("item_number");
+                $("#item_number").addClass("item_number_two");
+            }
         }
 
     });
 
     // * Kingston FURY 16GB KIT (Kosárba rakása)
+    $("#fooldal_fury_16gb_db").text(localStorage.getItem("kingston_db"));
+
     $("#fury_16gb_shop").click(function () {
         i++;
         kingston_fury_16GB++;
-        console.log('Kingston FURY 16GB KIT a kosárban: ' + kingston_fury_16GB + 'db');
+        localStorage.setItem("kingston_db",kingston_fury_16GB);
+        console.log('kingston a kosárban: ' + kingston_fury_16GB + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_fury_16gb_db").text(kingston_fury_16GB);
-        $("#item_number").text(i);
-
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_fury_16gb_db").text(localStorage.getItem("kingston_db"));
     });
 
     $("#fury_16gb_shop_remove").click(function () {
         if (kingston_fury_16GB > 0) {
             i--;
             kingston_fury_16GB--;
-            console.log('Kingston FURY 16GB KIT a kosárban: ' + kingston_fury_16GB + 'db');
+            localStorage.setItem("kingston_db",kingston_fury_16GB);
+            console.log('kingston a kosárban: ' + kingston_fury_16GB + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#fooldal_fury_16gb_db").text(kingston_fury_16GB);
-            $("#item_number").text(i);
-    
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            $("#fooldal_fury_16gb_db").text(localStorage.getItem("kingston_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
                 $("#item_number").addClass("item_number_two");
             }
-
         }
 
     });
 
     // * Dell Alienware AW2521H Gaming monitor (Kosárba rakása)
+    $("#fooldal_alienware_db").text(localStorage.getItem("dell_db"));
+
     $("#alienware_shop").click(function () {
         i++;
         dell_alienware_aw2521h++;
-        console.log('Dell Alienware AW2521H Gaming monitor a kosárban: ' + dell_alienware_aw2521h + 'db');
+        localStorage.setItem("dell_db",dell_alienware_aw2521h);
+        console.log('dell a kosárban: ' + dell_alienware_aw2521h + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_alienware_db").text(dell_alienware_aw2521h);
-        $("#item_number").text(i);
-
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_alienware_db").text(localStorage.getItem("dell_db"));
     });
 
     $("#alienware_shop_remove").click(function () {
         if (dell_alienware_aw2521h > 0) {
             i--;
-        dell_alienware_aw2521h--;
-        console.log('Dell Alienware AW2521H Gaming monitor a kosárban: ' + dell_alienware_aw2521h + 'db');
-        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_alienware_db").text(dell_alienware_aw2521h);
-        $("#item_number").text(i);
-
-        if (i > 9) {
-            $("#item_number").removeClass("item_number");
-            $("#item_number").addClass("item_number_two");
-        }
-
+            dell_alienware_aw2521h--;
+            localStorage.setItem("dell_db",dell_alienware_aw2521h);
+            console.log('dell a kosárban: ' + dell_alienware_aw2521h + 'db');
+            console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            $("#fooldal_alienware_db").text(localStorage.getItem("dell_db"));
+            if (i > 9) {
+                $("#item_number").removeClass("item_number");
+                $("#item_number").addClass("item_number_two");
+            }
         }
 
     });
 
     // * Alaplap ASUS ROG MAXIMUS Z690 EXTREME (Kosárba rakása)
+    $("#fooldal_asus_maximus_db").text(localStorage.getItem("alaplap_db"));
+
     $("#asus_maximus_shop").click(function () {
         i++;
         alaplap_asus_rog_maximus_z690++;
-        console.log('Alaplap ASUS ROG MAXIMUS Z690 EXTREME a kosárban: ' + alaplap_asus_rog_maximus_z690 + 'db');
+        localStorage.setItem("alaplap_db",alaplap_asus_rog_maximus_z690);
+        console.log('alaplap a kosárban: ' + alaplap_asus_rog_maximus_z690 + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_asus_maximus_db").text(alaplap_asus_rog_maximus_z690);
-        $("#item_number").text(i);
-
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_asus_maximus_db").text(localStorage.getItem("alaplap_db"));
     });
 
     $("#asus_maximus_shop_remove").click(function () {
         if (alaplap_asus_rog_maximus_z690 > 0) {
             i--;
-        alaplap_asus_rog_maximus_z690--;
-        console.log('Alaplap ASUS ROG MAXIMUS Z690 EXTREME a kosárban: ' + alaplap_asus_rog_maximus_z690 + 'db');
-        console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_asus_maximus_db").text(alaplap_asus_rog_maximus_z690);
-        $("#item_number").text(i);
-
-        if (i > 9) {
-            $("#item_number").removeClass("item_number");
-            $("#item_number").addClass("item_number_two");
-        }
-
+            alaplap_asus_rog_maximus_z690--;
+            localStorage.setItem("alaplap_db",alaplap_asus_rog_maximus_z690);
+            console.log('alaplap a kosárban: ' + alaplap_asus_rog_maximus_z690 + 'db');
+            console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            $("#fooldal_asus_maximus_db").text(localStorage.getItem("alaplap_db"));
+            if (i > 9) {
+                $("#item_number").removeClass("item_number");
+                $("#item_number").addClass("item_number_two");
+            }
         }
 
     });
 
     // * Asus ROG-STRIX-1000G tápegység, 80+ arany (Kosárba rakása)
+    $("#fooldal_rog_strix_tap_db").text(localStorage.getItem("strix_db"));
+
     $("#rog_strix_tap_shop").click(function () {
         i++;
         asus_rog_strix_1000g++;
-        console.log('Asus ROG-STRIX-1000G tápegység, 80+ arany a kosárban: ' + asus_rog_strix_1000g + 'db');
+        localStorage.setItem("strix_db",asus_rog_strix_1000g);
+        console.log('strix a kosárban: ' + asus_rog_strix_1000g + 'db');
         console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-        $("#fooldal_rog_strix_tap_db").text(asus_rog_strix_1000g);
-        $("#item_number").text(i);
-
+        localStorage.setItem("ossz_db",i);
+        $("#item_number").text(localStorage.getItem("ossz_db"));
         if (i > 9) {
             $("#item_number").removeClass("item_number");
             $("#item_number").addClass("item_number_two");
         }
+        $("#fooldal_rog_strix_tap_db").text(localStorage.getItem("strix_db"));
     });
 
     $("#rog_strix_tap_shop_remove").click(function () {
         if (asus_rog_strix_1000g > 0) {
             i--;
             asus_rog_strix_1000g--;
-            console.log('Asus ROG-STRIX-1000G tápegység, 80+ arany a kosárban: ' + asus_rog_strix_1000g + 'db');
+            localStorage.setItem("strix_db",asus_rog_strix_1000g);
+            console.log('strix a kosárban: ' + asus_rog_strix_1000g + 'db');
             console.log('Ennyi áru van a kosárban összesen: ' + i + 'db');
-            $("#fooldal_rog_strix_tap_db").text(asus_rog_strix_1000g);
-            $("#item_number").text(i);
-    
+            localStorage.setItem("ossz_db",i);
+            $("#item_number").text(localStorage.getItem("ossz_db"));
+            $("#fooldal_rog_strix_tap_db").text(localStorage.getItem("strix_db"));
             if (i > 9) {
                 $("#item_number").removeClass("item_number");
                 $("#item_number").addClass("item_number_two");
             }
-
         }
 
     });

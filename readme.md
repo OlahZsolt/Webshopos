@@ -55,3 +55,9 @@ Elkészült a "kapcsolatok" és a "rólunk" fül, kisebb javítások még lehetn
 
 Elkezdem az adatbázisra kötést a regisztáció és a bejelentkezéshez, amit php-val terzezünk megvalósítani.
 ***
+
+***
+**2023.04.14**
+### Oláh Zsolt Martin bejegyzés 
+Újabb 2 árut csináltam meg, hogy működjön a kosárba rakása, a negyediket is elkezdtem.
+***
