@@ -1,0 +1,68 @@
+body, html{
+    background: rgb(70,82,106);
+background: radial-gradient(circle, rgba(70,82,106,1) 0%, rgba(86,103,126,1) 49%, rgba(58,64,79,1) 100%);
+}
+
+.logo_size{
+    width: 200px;
+    height: 50%;
+}
+
+.custom_btn{
+    background-color: #2196F3;
+}
+
+.shopping_gadgets{
+    background-color: white;
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    border-radius: 30px;
+ }
+
+.user_icon_size{
+    width: 30px;
+    height: 50%;
+    margin-bottom: 5px;
+}
+
+.search_icon_size{
+    margin-left: -12px;
+    margin-top: -9px;
+    width: 30px;
+    height: 30px;
+}
+
+.custom_navlinks{
+    margin-left: 30%;
+}
+
+.custom_user_icon{
+margin-left: 100%;
+}
+
+.fizetendo_style{
+    color: black;
+    font-size: 20px;
+}
+
+.szallitasi_adatok_cim{
+    color: black;
+    font-size: 25px;
+}
+
+.szallitasi_adatok{
+    color: black;
+    font-size: 15px;
+}
+
+@media (max-width:991px) { 
+
+.custom_navlinks{
+    margin-left: 0px;
+}
+
+.custom_user_icon{
+    margin-left: 0px;
+}
+}
