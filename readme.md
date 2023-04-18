@@ -67,3 +67,9 @@ Elkezdem az adatbázisra kötést a regisztáció és a bejelentkezéshez, amit 
 ### Oláh Zsolt Martin bejegyzés 
 Mostmár minden áruval működik a kosárba rakás, és ha a kosár oldalon kitöröljük vagy hozzáadunk, akkor ott is ugyanazt követi, szóval nagyjából össze lett hangolva a két oldal.
 ***
+
+***
+**2023.04.18**
+### Oláh Zsolt Martin bejegyzés 
+Elkezdtem a véglegesítést, már csak ezt kell megcinálni, és az adatbázisra kötést, és a két oldal összekötését + a navbar.
+***
