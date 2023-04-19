@@ -73,3 +73,11 @@ Mostmár minden áruval működik a kosárba rakás, és ha a kosár oldalon kit
 ### Oláh Zsolt Martin bejegyzés 
 Elkezdtem a véglegesítést, már csak ezt kell megcinálni, és az adatbázisra kötést, és a két oldal összekötését + a navbar.
 ***
+
+***
+**2023.04.19**
+### Viczián Dániel bejegyzés
+A regisztrációs oldalon lehet tárolni adatbázisban a felhasználók adatait, egyelőre hiányosan, a szállítási adatok még hiányoznak.
+
+Az regisztráció tábla teljessé tétele után következik a bejelentkezés adatbázis kötése.
+***
