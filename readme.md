@@ -1,9 +1,7 @@
 ***
 # Webshop Dokumentáció
 
-**Beosztottuk Danival a munkákat, én a fő oldalért, a navbar-ért és a kosár tartalmáért felelek, ő pedig a regisztráció, bejelentkezés, kapcsolatok és a "Rólunk" fülért.**
-
-Az adatbázisra kötést vagy a php-s megoldást közösen csináljuk.
+**Beosztottuk Danival a munkákat, én a fő oldalért, a navbar-ért, a footerért, a kosár tartalmáért, és a rendelés lebonyolításáért felelek, ő pedig a regisztráció, bejelentkezés, kapcsolatok, rólunk fülért + ezek adatbázisra kötéséért felel.**
 
 ***
 **2023.04.04**
@@ -72,4 +70,10 @@ Mostmár minden áruval működik a kosárba rakás, és ha a kosár oldalon kit
 **2023.04.18**
 ### Oláh Zsolt Martin bejegyzés 
 Elkezdtem a véglegesítést, már csak ezt kell megcinálni, és az adatbázisra kötést, és a két oldal összekötését + a navbar.
+***
+
+***
+**2023.04.19**
+### Oláh Zsolt Martin bejegyzés 
+Befejeztem a rendelést, fizetési módok és szállítási módok közül lehet választani. Végig megy hiba nélkül az egész rendelési ág a megrendelés teljesítéséig + csináltam egy footert minden oldalra. Már csak Dani-nak kell befejezni az adatbázisra kötést, és szerintem teljesen készen is vagyunk!
 ***
