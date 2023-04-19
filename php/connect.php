@@ -18,7 +18,7 @@ if($conn->connect_error){
 else{
     $stmt= $conn->prepare("insert into registration(email,password,lastName,firstName,phone,address,address2,city)
     values(?,?,?,?,?,?,?,?)");
-    $stmt->bind_param("s,s,s,s,i,s,s,s",$email,$password,$lastName,$firstName,$phone,$address,$address2,$city);
+    $stmt->bind_param("ssssisss",$email,$password,$lastName,$firstName,$phone,$address,$address2,$city);
     $stmt->execute();
     echo "Sikeres regisztráció...";
     $stmt->close();
