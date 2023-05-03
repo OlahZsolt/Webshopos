@@ -77,8 +77,16 @@ Elkezdtem a véglegesítést, már csak ezt kell megcinálni, és az adatbázisr
 ### Oláh Zsolt Martin bejegyzés 
 Befejeztem a rendelést, fizetési módok és szállítási módok közül lehet választani. Végig megy hiba nélkül az egész rendelési ág a megrendelés teljesítéséig + csináltam egy footert minden oldalra. Már csak Dani-nak kell befejezni az adatbázisra kötést, és szerintem teljesen készen is vagyunk!
 ***
+
+***
+**2023.04.22**
 ### Viczián Dániel bejegyzés
 A regisztrációs oldalon lehet tárolni adatbázisban a felhasználók adatait, egyelőre hiányosan, a szállítási adatok még hiányoznak.
 
 Az regisztráció tábla teljessé tétele után következik a bejelentkezés adatbázis kötése.
+***
+***
+**2023.05.03**
+### Viczián Dániel bejegyzés
+Elkészült a regisztráció, illetve a bejelenkezés oldal illetve az adatbázis. Ha egy az már adatbázisban szereplő név, vagy email kerül beírásra, akkor kiírja az oldal a "sikeres bejelentkezés" feliratot.
 ***
