@@ -90,3 +90,8 @@ Az regisztráció tábla teljessé tétele után következik a bejelentkezés ad
 ### Viczián Dániel bejegyzés
 Elkészült a regisztráció, illetve a bejelenkezés oldal illetve az adatbázis. Ha egy az már adatbázisban szereplő név, vagy email kerül beírásra, akkor kiírja az oldal a "sikeres bejelentkezés" feliratot.
 ***
+***
+**2023.05.11**
+### Oláh Zsolt Martin bejegyzés
+PHP behozása, közös header és footer meghívása és ha kijelentkezve akar valaki rendelni akkor másik Pay oldal behozása, ahol figyelmeztet, hogy be kell jelentkezni. 
+***

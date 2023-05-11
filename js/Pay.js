@@ -74,7 +74,4 @@ $("#visszateres").click(function(){
     localStorage.setItem("ossz_db", '0');
     window.location.href = 'Webshop.php';
 });
-
-
-
 });
