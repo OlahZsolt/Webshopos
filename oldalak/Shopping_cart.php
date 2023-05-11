@@ -284,17 +284,20 @@ include('Header.php');
             <div style="text-align: center;" class="col">
               <a href="Webshop.php" class="btn btn-danger" >Vissza</a>
             </div>
+
+            <?php
+                if(isset($_SESSION["user_id"])):
+             ?>
             <div style="text-align: center;" class="col">
               <a href="Pay.php" class="btn btn-primary" >Véglegesítés</a>
             </div>
+
+            <?php else: ?>
+              <p> <a> Kérem </a><a href="Login_web.php">Jelentkezzen be</a> vagy <a href="Registration.php"> Regisztráljon</a></p>
+
+          <?php endif; ?>
+
            </div>
-
-
-
-           
-
-
-
 
         </div>
       </div>

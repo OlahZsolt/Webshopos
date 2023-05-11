@@ -41,6 +41,13 @@
     <?php 
 
 include('Header.php');
+$id=$_SESSION["user_id"];
+$con= new mysqli('localhost','root','','webshop_users');
+$stmt = $con->prepare("SELECT * FROM registration WHERE id = $id ");
+    
+    $stmt->execute();
+    $stmt_result = $stmt->get_result();
+    $data = $stmt_result->fetch_assoc();
 
 ?>
 
@@ -64,7 +71,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Megye</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő megye</label>
+                    <label class="szallitasi_adatok"><?php echo $data['deliveryState'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -72,7 +79,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Város</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő város</label>
+                    <label class="szallitasi_adatok"><?php echo $data['deliveryCity'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -80,7 +87,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Cím</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő cím</label>
+                    <label class="szallitasi_adatok"><?php echo $data['deliveryAddress'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -88,7 +95,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Házszám</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő házszám</label>
+                    <label class="szallitasi_adatok"><?php echo $data['deliveryAddress2'] ?></label>
                 </div>
               </div>
 
@@ -102,15 +109,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Név</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő név</label>
-                </div>
-              </div>
-              <div class="row">
-                <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Cég/Intézmény név</label>
-                </div>
-                <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Itt adja meg ha kell</label>
+                    <label class="szallitasi_adatok"><?php echo $data['lastName']." ".$data['firstName'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -118,7 +117,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Megye</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő megye</label>
+                    <label class="szallitasi_adatok"><?php echo $data['deliveryState'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -126,7 +125,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Város</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő város</label>
+                    <label class="szallitasi_adatok"><?php echo $data['city'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -134,7 +133,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Cím</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő cím</label>
+                    <label class="szallitasi_adatok"><?php echo $data['address'] ?></label>
                 </div>
               </div>
               <div class="row">
@@ -142,7 +141,7 @@ include('Header.php');
                     <label class="szallitasi_adatok">Házszám</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok">Betöltendő házszám</label>
+                    <label class="szallitasi_adatok"><?php echo $data['address2'] ?></label>
                 </div>
               </div>
 

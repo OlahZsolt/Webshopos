@@ -26,39 +26,39 @@ include('Header.php');
       <h3>Személyes adatok</h3>
       <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" name="email">
+        <input type="email" class="form-control" id="inputEmail4" name="email" required>
       </div>
       <div class="col-md-6">
         <label for="inputPassword4" class="form-label">Jelszó</label>
-        <input type="password" class="form-control" id="inputPassword4" name="password">
+        <input type="password" class="form-control" id="inputPassword4" name="password" required>
       </div>
       <div class="col-md-6">
         <label for="inputLastName" class="form-label">Vezetéknév</label>
-        <input type="text" class="form-control" id="inputLastName" name="lastName">
+        <input type="text" class="form-control" id="inputLastName" name="lastName" required>
       </div>
       <div class="col-md-6">
         <label for="inputFirstName" class="form-label">Keresztnév</label>
-        <input type="text" class="form-control" id="inputFirstName" name="firstName">
+        <input type="text" class="form-control" id="inputFirstName" name="firstName" required>
       </div>
       <div class="col-md-6">
         <label for="inputPhone" class="form-label">Telefonszám</label>
-        <input type="text" class="form-control" id="inputPhone" placeholder="+36701233214" name="phone">
+        <input type="text" class="form-control" id="inputPhone" placeholder="+36701233214" name="phone" required>
       </div>
       <div class="col-12">
         <label for="inputAddress" class="form-label">Cím</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus" name="address">
+        <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus" name="address" required>
       </div>
       <div class="col-12">
         <label for="inputAddress2" class="form-label">Házszám</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó" name="address2">
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó" name="address2" required>
       </div>
       <div class="col-md-6">
         <label for="inputCity" class="form-label">Város</label>
-        <input type="text" class="form-control" id="inputCity" name="city">
+        <input type="text" class="form-control" id="inputCity" name="city" required>
       </div>
       <div class="col-md-4">
         <label for="inputState" class="form-label">Megye</label>
-        <select id="inputState" class="form-select" name="state">
+        <select id="inputState" class="form-select" name="state" required>
           <option selected>Válassz...</option>
           <option value="Bács-Kiskun">Bács-Kiskun</option>
           <option value="Baranya">Baranya</option>
@@ -83,24 +83,24 @@ include('Header.php');
       </div>
       <div class="col-md-2">
         <label for="inputZip" class="form-label">Irányítószám</label>
-        <input type="text" class="form-control" id="inputZip" name="zip">
+        <input type="text" class="form-control" id="inputZip" name="zip" required>
       </div>
       <h3>Szállítási adatok</h3>
       <div class="col-12">
         <label for="inputAddress" class="form-label">Cím</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus" name="deliveryAddress">
+        <input type="text" class="form-control" id="inputAddress" placeholder="Utcanév, közterület típus" name="deliveryAddress" required>
       </div>
       <div class="col-12">
         <label for="inputAddress2" class="form-label">Házszám</label>
-        <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó" name="deliveryAddress2">
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Házszám, épület, vagy ajtó" name="deliveryAddress2" required>
       </div>
       <div class="col-md-6">
         <label for="inputCity" class="form-label">Város</label>
-        <input type="text" class="form-control" id="inputCity" name="deliveryCity">
+        <input type="text" class="form-control" id="inputCity" name="deliveryCity" required>
       </div>
       <div class="col-md-4">
         <label for="inputState" class="form-label">Megye</label>
-        <select id="inputState" class="form-select" name="deliveryState">
+        <select id="inputState" class="form-select" name="deliveryState" required>
           <option selected>Válassz...</option>
           <option value="Bács-Kiskun">Bács-Kiskun</option>
           <option value="Baranya">Baranya</option>
@@ -125,7 +125,7 @@ include('Header.php');
       </div>
       <div class="col-md-2">
         <label for="inputZip" class="form-label">Irányítószám</label>
-        <input type="text" class="form-control" id="inputZip" name="deliveryZip">
+        <input type="text" class="form-control" id="inputZip" name="deliveryZip" required>
       </div>
 
       <div class="col-12">

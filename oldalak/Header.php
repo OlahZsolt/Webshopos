@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="Webshop.php"><img src="../assets/webshop_logo_dark_theme.png" class="logo_size"
@@ -18,7 +22,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="Registration.php">Regisztráció</a></li>
-              <li><a class="dropdown-item" href="Login.php">Bejelentkezés</a></li>
+              <li><a class="dropdown-item" href="Login_web.php">Bejelentkezés</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -27,6 +31,13 @@
             </ul>
           </li>
         </ul>
+
+        <?php
+    if(isset($_SESSION["user_id"])):
+        ?>
+   <p><a href="logout.php">Kijelentkezés</a></p>
+   <?php endif; ?>
+
       </div>
     </div>
   </nav>

@@ -19,10 +19,18 @@
 //adatbázis kapcsolás
 
 $conn= new mysqli('localhost','root','','webshop_users');
-if($conn->connect_error){
-    die('Megszakadt a kapcsolat : '.$conn->connect_error);
+$sql= "SELECT * FROM registration WHERE email = '$email'";
+$result = mysqli_query($conn, $sql);
+$rowCount = mysqli_num_rows($result);
+if($rowCount>0){
+    echo "<div class='alert alert-danger'>Az email már foglalt!</div>";
 }
 else{
+
+  if($conn->connect_error){
+      die('Megszakadt a kapcsolat : '.$conn->connect_error);
+    }
+  else{
     $stmt= $conn->prepare("insert into registration(email,password,lastName,firstName,phone,address,address2,city,state,zip,deliveryAddress,deliveryAddress2,deliveryCity,deliveryState,deliveryZip)
     values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("ssssissssssssss",$email,$password,$lastName,$firstName,$phone,$address,$address2,$city,$state,$zip,$deliveryAddress,$deliveryAddress2,$deliveryCity,$deliveryState,$deliveryZip);
@@ -30,7 +38,7 @@ else{
     echo "Sikeres regisztráció...";
     $stmt->close();
     $conn->close();
+    }
 }
-
 ?>
 

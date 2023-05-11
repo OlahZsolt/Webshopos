@@ -14,6 +14,10 @@ if($con -> connect_error){
         $data = $stmt_result->fetch_assoc();
         if($data['password'] === $password){
             echo "<h2>Sikeres bejelentkezés</h2>";
+            session_start();
+            $_SESSION["user_id"] = $data['id'];
+            header("Location: Webshop.php");
+            exit;
         }
         else{
             echo "<h2>Nem megfelelő az email vagy a jelszó</h2>";
