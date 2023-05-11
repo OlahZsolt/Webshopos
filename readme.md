@@ -95,3 +95,11 @@ Elkészült a regisztráció, illetve a bejelenkezés oldal illetve az adatbázi
 ### Oláh Zsolt Martin bejegyzés
 PHP behozása, közös header és footer meghívása és ha kijelentkezve akar valaki rendelni akkor másik Pay oldal behozása, ahol figyelmeztet, hogy be kell jelentkezni. 
 ***
+***
+**2023.05.11**
+### Viczián Dániel bejegyzés
+Bejelentkezés nélkül nem lehet véglegesíteni a rendelést a Shopping_cart oldalon, hanem felkínálja az oldal a regisztrációt, vagy a bejelentkezést.
+
+Sikeres bejelentkezés után a header jobb oldalán megjelenik a kijelentkezés opció. Továbbá megjelenik a Shopping_cart oldalon egy véglegesítés gomb.
+Ezután a Pay oldalon megjelennek a regisztrált felhasználó szállításhoz szükséges adatai.
+***
