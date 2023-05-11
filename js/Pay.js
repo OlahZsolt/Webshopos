@@ -72,8 +72,7 @@ $("#visszateres").click(function(){
     localStorage.setItem("razer_db", '0');
     localStorage.setItem("hyper_db", '0');
     localStorage.setItem("ossz_db", '0');
-    window.location.href = 'Webshop.html';
-    console.log('gooomb');
+    window.location.href = 'Webshop.php';
 });
 
 

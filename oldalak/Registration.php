@@ -13,38 +13,11 @@
 <body>
 
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../assets/webshop_logo_dark_theme.png" class="logo_size"
-          alt="webshop_logo" /></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse custom_navlinks" id="navbarSupportedContent">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Keresés.." aria-label="Search">
-          <button class="btn btn-outline-primary" type="submit">Keresés</button>
-        </form>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown custom_user_icon">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="../assets/user_icon.png" class="user_icon_size" alt="user_icon" />
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="Registration.html">Regisztráció</a></li>
-              <li><a class="dropdown-item" href="Login.html">Bejelentkezés</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="AboutUs.html">Rólunk</a></li>
-              <li><a class="dropdown-item" href="Availability.html">Kapcsolat</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<?php 
+
+include('Header.php');
+
+?>
 
   <div class="center">
 
@@ -164,46 +137,7 @@
 
 
   <footer style="margin-top: 1237px;" class="site-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-6">
-          <h6>Rólunk</h6>
-          <p class="text-justify">A D&Zs kft. 2020 -ban alapították belföldi magánszemélyek azzal a céllal, hogy minőségi számítástechnikai eszközök
-            forgalmazásával, informatikai rendszerek telepítésével és értéknövelt szolgáltatások nyújtásával minél szélesebb
-            elégedett vevőkört tudhasson magáénak úgy az egyéni vásárlók között, mint a vállalati, intézményi szférában.
-            Vevőbarát árakkal, szakszerű és ügyfélcentrikus kiszolgálással értük el, hogy mostanra nagyszámú magán- és céges
-            ügyfelet tudhatunk partnereink között. A dinamikus fejlődést szakmai képzésekkel és megbízható pénzügyi háttérrel
-            biztosítjuk.</p>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <h6>Kategóriák</h6>
-          <ul class="footer-links">
-            <li><a href="Webshop.html">Főoldal</a></li>
-          </ul>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <h6>Pár link</h6>
-          <ul class="footer-links">
-            <li><a href="AboutUs.html">Rólunk</a></li>
-            <li><a href="Availability.html">Kapcsolat</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
-       <a href="Webshop.html">D&Zs</a>.
-          </p>
-        </div>
-
-        
-      </div>
-    </div>
+  <?php include('Footer.php'); ?>
 </footer>
 
 
