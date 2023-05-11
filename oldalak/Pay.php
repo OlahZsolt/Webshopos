@@ -117,7 +117,7 @@ $stmt = $con->prepare("SELECT * FROM registration WHERE id = $id ");
                     <label class="szallitasi_adatok">Megye</label>
                 </div>
                 <div style="margin-left: 12%;" class="col">
-                    <label class="szallitasi_adatok"><?php echo $data['deliveryState'] ?></label>
+                    <label class="szallitasi_adatok"><?php echo $data['state'] ?></label>
                 </div>
               </div>
               <div class="row">

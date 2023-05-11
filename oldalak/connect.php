@@ -33,7 +33,7 @@ else{
   else{
     $stmt= $conn->prepare("insert into registration(email,password,lastName,firstName,phone,address,address2,city,state,zip,deliveryAddress,deliveryAddress2,deliveryCity,deliveryState,deliveryZip)
     values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssissssssssss",$email,$password,$lastName,$firstName,$phone,$address,$address2,$city,$state,$zip,$deliveryAddress,$deliveryAddress2,$deliveryCity,$deliveryState,$deliveryZip);
+    $stmt->bind_param("sssssssssssssss",$email,$password,$lastName,$firstName,$phone,$address,$address2,$city,$state,$zip,$deliveryAddress,$deliveryAddress2,$deliveryCity,$deliveryState,$deliveryZip);
     $stmt->execute();
     echo "Sikeres regisztráció...";
     $stmt->close();
