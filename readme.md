@@ -103,3 +103,8 @@ Bejelentkezés nélkül nem lehet véglegesíteni a rendelést a Shopping_cart o
 Sikeres bejelentkezés után a header jobb oldalán megjelenik a kijelentkezés opció. Továbbá megjelenik a Shopping_cart oldalon egy véglegesítés gomb.
 Ezután a Pay oldalon megjelennek a regisztrált felhasználó szállításhoz szükséges adatai.
 ***
+***
+**2023.05.15**
+### Oláh Zsolt Martin bejegyzés
+A mai napon a dokumentációval be is fejeztük a webshopot, rengeteg munka volt vele, és reméljük megfelel minden szempontnak.
+***
